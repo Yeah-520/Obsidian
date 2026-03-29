@@ -8,5 +8,17 @@ enum Weekday {
 }
 ```
 ## 带有参数的枚举常量
+```java
+enum Weekday {
+	//public static final Weekday MONDAY = new Weekday("MONDAY", 0, 1);
+    MONDAY(1), TUESDAY(2), WEDNESDAY(3), THURSDAY(4), FRIDAY(5), SATURDAY(6), SUNDAY(7);
+    
+    public final int dayValue;
+	
+    Weekday(int dayValue) {
+        this.dayValue = dayValue;
+    }
+}
+```
 ## 实现接口的枚举常量
 ## 匿名内部类的方式
