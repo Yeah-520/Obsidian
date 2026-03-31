@@ -95,7 +95,7 @@ class 外部类名 {
 # ==匿名内部类==（重要）
 >没有名字的内部类，可以在方法中，也可以在类中方法外
 >没有名字的Java类`(){}` + 继承类/实现接口`父类名/接口名` + 重写方法`@Override` + 创建对象`new`
-- `()`是调用匿名类的默认无参构造方法
+- `()`是调用匿名类的默认无参构造方法（继承关系则调用父类构造方法）
 - 使用jps 和 jhsdb hsdb 查看
 ```java
 new 父类名/接口名(){
@@ -131,7 +131,7 @@ public class Main {
         Swim s = new Swim() {  
             @Override  
             public void swimming() {  
-                System.out.println("多态,走子类的重写方法");  
+                System.out.println("我是匿名内部类(实现关系)");  
             }  
         };  
         s.swimming();  
