@@ -126,7 +126,7 @@ public void method() throws Exception1,Exception2... {
 ```
 #### 作用
 1. 声明方法**不处理**这些异常
-2. 把异常**抛给上层调用者**去 try-catch
+2. 把异常**抛给上层调用者**去 `try-catch`
 3. 编译时异常CheckedException（非 RuntimeException）==必须==**抛出** `throws` 或捕获 `try-catch`
 
 ### throw vs throws
@@ -148,6 +148,6 @@ public void method() throws Exception1,Exception2... {
 1. 定义异常类
 2. 写继承关系
 3. 空参构造
-4. 待参构造
+4. 带参构造
 
 

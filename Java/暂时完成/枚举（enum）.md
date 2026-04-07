@@ -17,17 +17,23 @@ enum Weekday {
 ## 带有参数的枚举常量
 ```java
 enum Weekday {  
-    //public static final Weekday MONDAY = new Weekday("MONDAY", 0, 1);  
-    MONDAY(1), TUESDAY(2), WEDNESDAY(3), THURSDAY(4), FRIDAY(5), SATURDAY(6), SUNDAY(7);  
-	
+    //public static final Weekday MONDAY = new Weekday("MONDAY", 0 , 1 , "星期一");  
+    MON(1, "星期一"), TUE(2, "星期二"), WED(3, "星期三"), THU(4, "星期四"), FRI(5, "星期五"), SAT(6, "星期六"), SUN(0, "星期日");  
+  
     private final int dayValue;  
-	
-    Weekday(int dayValue) {  
+    private final String chinese;  
+  
+    Weekday(int dayValue, String day) {  
         this.dayValue = dayValue;  
+        this.chinese = day;  
     }  
-	
-    public int getDayValue(){  
+  
+    public int getDayValue() {  
         return this.dayValue;  
+    }  
+  
+    public String getChinese() {  
+        return chinese;  
     }  
 }
 ```
